@@ -47,10 +47,15 @@ All colors MUST be HSL.
     --tech-badge-border: hsl(193 60% 40%);
     --experience-border: hsl(193 40% 30%);
 
-    /* Typography scale */
+    /* Typography scale - Desktop */
     --text-hero: 3.5rem;
     --text-section: 2rem;
     --text-card-title: 1.25rem;
+    
+    /* Mobile Typography scale */
+    --text-hero-mobile: 2rem;
+    --text-section-mobile: 1.5rem;
+    --text-card-title-mobile: 1.125rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -121,6 +126,25 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    body {
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Improve touch targets */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better mobile scrolling */
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
 
   /* Print styles for resume */
   @media print {
@@ -130,7 +154,7 @@ All colors MUST be HSL.
     
     body {
       -webkit-print-color-adjust: exact;
-      color-adjust: exact;
+      print-color-adjust: exact;
     }
     
     .print\:border-0 {

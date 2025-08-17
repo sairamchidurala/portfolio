@@ -137,7 +137,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-section font-bold text-foreground mb-4">
+          <h2 className="text-section-mobile md:text-section font-bold text-foreground mb-4">
             Key Projects & Achievements
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -145,17 +145,17 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card
               key={project.title}
-              className="p-6 bg-card-gradient border-border hover:border-primary/30 transition-all duration-500 hover:shadow-subtle-glow group h-full"
+              className="p-4 md:p-6 bg-card-gradient border-border hover:border-primary/30 transition-all duration-500 hover:shadow-subtle-glow group h-full"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Header */}
               <div className="flex justify-between items-start mb-4">
                 <div className="flex-1">
-                  <h3 className="text-card-title font-bold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-card-title-mobile md:text-card-title font-bold text-card-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
                   <p className="text-primary font-medium">{project.client}</p>

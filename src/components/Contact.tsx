@@ -9,7 +9,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-section font-bold text-foreground mb-4">
+          <h2 className="text-section-mobile md:text-section font-bold text-foreground mb-4">
             Let's Connect
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -18,10 +18,10 @@ const Contact = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
             {/* Contact Information */}
-            <Card className="p-8 bg-card-gradient border-border">
-              <h3 className="text-card-title font-bold text-card-foreground mb-6">
+            <Card className="p-4 md:p-8 bg-card-gradient border-border">
+              <h3 className="text-card-title-mobile md:text-card-title font-bold text-card-foreground mb-6">
                 Contact Information
               </h3>
 
@@ -82,8 +82,8 @@ const Contact = () => {
             </Card>
 
             {/* Quick Actions */}
-            <Card className="p-8 bg-card-gradient border-border">
-              <h3 className="text-card-title font-bold text-card-foreground mb-6">
+            <Card className="p-4 md:p-8 bg-card-gradient border-border">
+              <h3 className="text-card-title-mobile md:text-card-title font-bold text-card-foreground mb-6">
                 Quick Actions
               </h3>
 
@@ -133,8 +133,8 @@ const Contact = () => {
           </div>
 
           {/* Professional Summary */}
-          <Card className="p-8 bg-card-gradient border-border text-center">
-            <h3 className="text-card-title font-bold text-card-foreground mb-4">
+          <Card className="p-4 md:p-8 bg-card-gradient border-border text-center">
+            <h3 className="text-card-title-mobile md:text-card-title font-bold text-card-foreground mb-4">
               Professional Summary
             </h3>
             <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto">

@@ -12,7 +12,13 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1rem',
+				sm: '1.5rem',
+				md: '2rem',
+				lg: '2rem',
+				xl: '2rem'
+			},
 			screens: {
 				'2xl': '1400px'
 			}
@@ -73,8 +79,11 @@ export default {
 			},
 			fontSize: {
 				'hero': 'var(--text-hero)',
+				'hero-mobile': 'var(--text-hero-mobile)',
 				'section': 'var(--text-section)',
-				'card-title': 'var(--text-card-title)'
+				'section-mobile': 'var(--text-section-mobile)',
+				'card-title': 'var(--text-card-title)',
+				'card-title-mobile': 'var(--text-card-title-mobile)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
