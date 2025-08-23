@@ -1,32 +1,44 @@
 #!/bin/bash
-# deploy.sh [env]
-# Example: ./deploy.sh dev   → https://dev.iamsairam.in/
-#          ./deploy.sh       → https://iamsairam.in/
+# Usage: ./deploy.sh dev|prod
 
 EC2_USER=killer
-REMOTE_PATH=/var/www/sairam-bytes
-DOMAIN=iamsairam.in
+REMOTE_BASE=/var/www/sairam-bytes
 
-ENVIRONMENT=$1
-
-if [ "$ENVIRONMENT" == "dev" ]; then
-  REMOTE_PATH="${REMOTE_PATH}-dev"
-  DOMAIN="dev.${DOMAIN}"
+# 1️⃣ Check env
+if [ -z "$1" ]; then
+  echo "❌ Please provide environment (dev|prod)"
+  exit 1
 fi
 
-# 1️⃣ Install dependencies (if new packages)
+ENV=$1
+if [ "$ENV" = "dev" ]; then
+  REMOTE_PATH="${REMOTE_BASE}-dev"
+  SITE="https://dev.iamsairam.in/"
+elif [ "$ENV" = "prod" ]; then
+  REMOTE_PATH="${REMOTE_BASE}"
+  SITE="https://iamsairam.in/"
+else
+  echo "❌ Unknown environment: $ENV (use dev or prod)"
+  exit 1
+fi
+
+# 2️⃣ Check if path exists on server
+if ! ssh $EC2_USER "test -d $REMOTE_PATH"; then
+  echo "❌ Remote path $REMOTE_PATH does not exist!"
+  exit 1
+fi
+
+# 3️⃣ Install deps & build
 echo "Installing dependencies..."
 npm ci
-
-# 2️⃣ Build project
 echo "Building project..."
 npm run build
 
-# 3️⃣ Deploy dist to EC2 using rsync
-echo "Deploying to server..."
+# 4️⃣ Deploy
+echo "Deploying to $ENV..."
 rsync -avz --rsync-path="sudo rsync" dist/ $EC2_USER:$REMOTE_PATH
 
-# 4️⃣ Done
+# 5️⃣ Done
 echo "✅ Deployment complete!"
-echo "You can now open your site at https://$DOMAIN/"
+echo "🌍 $SITE"
 
