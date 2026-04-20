@@ -23,10 +23,10 @@ else
 fi
 
 # 2️⃣ Check if path exists on server
-if ! ssh $EC2_USER "test -d $REMOTE_PATH"; then
-  echo "❌ Remote path $REMOTE_PATH does not exist!"
-  exit 1
-fi
+#if ! ssh $EC2_USER "test -d $REMOTE_PATH"; then
+#  echo "❌ Remote path $REMOTE_PATH does not exist!"
+#  exit 1
+#fi
 
 # 3️⃣ Install deps & build
 echo "Installing dependencies..."
@@ -36,7 +36,12 @@ npm run build
 
 # 4️⃣ Deploy
 echo "Deploying to $ENV..."
-rsync -avz --rsync-path="sudo rsync" dist/ $EC2_USER:$REMOTE_PATH
+#rsync -avz --rsync-path="sudo rsync" dist/ $EC2_USER:$REMOTE_PATH
+
+DEST_DIR=/mnt/apps/sairam-bytes
+mkdir -p $DEST_DIR
+
+rsync -avz dist/ $DEST_DIR
 
 # 5️⃣ Done
 echo "✅ Deployment complete!"
