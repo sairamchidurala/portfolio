@@ -4,22 +4,41 @@ import { Calendar, Users, TrendingUp, Award } from "lucide-react";
 
 const experiences = [
   {
-    title: "Software Engineer I",
+    title: "Software Engineer II",
     company: "Simplify360 (A Nextiva Company)",
-    period: "Oct 2024 - Present",
+    period: "Apr 2026 - Present",
     type: "Current Role",
     highlights: [
-      "Leading a team of 10 engineers as de facto technical lead",
+      "Owning end-to-end delivery for backend workflows across Unibox CRM and enterprise customer support platforms",
+      "Leading technical execution for a team of 10 engineers through architecture guidance, task unblocking, and mentoring",
+      "Driving architecture decisions for scalable, event-driven workflows across WhatsApp, Facebook, and Live Chat channels",
+      "Integrated AI/ML capabilities for sentiment analysis and summarization to improve agent productivity and customer insights",
+      "Partnering with PM, QA, Design, and client-facing teams to scope releases and deliver reliable features",
+      "Strengthening release reliability through Dockerized services, CI/CD pipelines, and hands-on production support"
+    ],
+    technologies: ["Java 8", "Spring Boot", "Kafka", "Docker", "AI/ML", "Microservices", "CI/CD", "System Design"],
+    achievements: [
+      "Service Ownership: Driving architecture, delivery, and production support for enterprise support workflows",
+      "Team Leadership: Guiding 10 engineers across implementation and release execution",
+      "Enterprise Clients: Tata Play, Kotak, Bank of Baroda"
+    ]
+  },
+  {
+    title: "Software Engineer I",
+    company: "Simplify360 (A Nextiva Company)",
+    period: "Oct 2024 - Mar 2026",
+    type: "1.5 Years",
+    highlights: [
       "Designed scalable microservices for WhatsApp, Facebook, and Live Chat platforms",
       "Built event-driven systems using Kafka for ticket management",
       "Implemented multithreading locking system for sequential message processing",
-      "Integrated AI/ML capabilities for sentiment analysis and summarization",
-      "Deployed containerized applications through CI/CD pipelines"
+      "Collaborated with cross-functional teams to release features for the Unibox CRM platform",
+      "Provided production support and client-level customizations for enterprise bot systems"
     ],
-    technologies: ["Java 8", "Spring Boot", "Kafka", "Docker", "AI/ML", "Microservices"],
+    technologies: ["Java 8", "Spring Boot", "Kafka", "Docker", "Microservices", "Multithreading"],
     achievements: [
-      "Team Leadership: Managing 10 engineers",
-      "Enterprise Clients: Tata Play, Kotak, Bank of Baroda"
+      "Built scalable messaging workflows for enterprise customer support",
+      "Strengthened platform reliability for high-volume real-time bot traffic"
     ]
   },
   {
@@ -52,7 +71,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            3+ years of backend development excellence with proven leadership and enterprise impact
+            3.5+ years of backend engineering with ownership across architecture, delivery, and enterprise-scale systems
           </p>
         </div>
 

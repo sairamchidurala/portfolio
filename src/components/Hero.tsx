@@ -27,12 +27,13 @@ const Hero = () => {
 
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/80 backdrop-blur-sm rounded-full mb-6">
             <div className="w-2 h-2 bg-primary rounded-full animate-glow-pulse" />
-            <span className="text-secondary-foreground font-medium">Software Engineer I</span>
+            <span className="text-secondary-foreground font-medium">Software Engineer II</span>
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            Results-driven Backend Engineer with 3+ years of experience building scalable
-            Java applications and microservices. Currently leading a team of 10 engineers
+            Backend Engineer with 3.5+ years of experience building scalable Java microservices,
+            owning end-to-end backend delivery, and mentoring engineers across enterprise
+            customer support platforms. Currently driving architecture and release execution
             at Simplify360 (Nextiva Company).
           </p>
 

@@ -37,7 +37,7 @@ const Resume = () => {
                 SAI RAM CHIDURALA
               </h1>
               <p className="text-lg text-primary font-semibold mb-4">
-                SOFTWARE ENGINEER I
+                SOFTWARE ENGINEER II
               </p>
 
               {/* Contact Info */}
@@ -71,10 +71,10 @@ const Resume = () => {
             <section className="mb-6">
               <h2 className="text-xl font-bold text-foreground mb-3">OBJECTIVE</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Results-driven Software Engineer with 3+ years of experience in developing scalable Java applications and
-                microservices using Spring Boot. Proven expertise in REST API development, Kafka, SQL/NoSQL, and CI/CD
-                workflows. Strong analytical and problem-solving skills with a keen ability to deliver end-to-end solutions in agile,
-                client-facing environments. Eager to contribute to impactful financial and regulatory technology initiatives.
+                Software Engineer II with 3.5+ years of experience building scalable Java microservices and owning backend
+                delivery for enterprise customer support platforms. Proven strength in system design, event-driven architecture,
+                CI/CD, production support, and cross-functional execution. Experienced in mentoring engineers, shaping
+                technical direction, and delivering reliable client-facing features in agile environments.
               </p>
             </section>
 
@@ -85,11 +85,10 @@ const Resume = () => {
               <h2 className="text-xl font-bold text-foreground mb-3">TECHNICAL SKILLS</h2>
               <div className="space-y-2 text-muted-foreground">
                 <div><strong>Languages & Frameworks:</strong> Java 8+, Spring Boot, REST APIs, Python, Flask</div>
-                <div><strong>Architecture:</strong> Microservices, Multithreading, Design Patterns</div>
-                <div><strong>Databases:</strong> MySQL, MongoDB (NoSQL)</div>
-                <div><strong>DevOps & Tools:</strong> Git, CI/CD (GitHub Actions, Jenkins), Docker, Bash</div>
-                <div><strong>Messaging & Integration:</strong> Apache Kafka, Webhooks</div>
-                <div><strong>Others:</strong> Linux, Agile, Data Structures & Algorithms (DSA)</div>
+                <div><strong>Architecture & Backend:</strong> Microservices, Event-driven Systems, Multithreading, Design Patterns, System Design</div>
+                <div><strong>Data & Messaging:</strong> MySQL, MongoDB (NoSQL), Apache Kafka, Webhooks, Query Optimization</div>
+                <div><strong>Delivery & Operations:</strong> Git, Docker, CI/CD (GitHub Actions, Jenkins), Linux, Bash, Production Support</div>
+                <div><strong>Engineering Practices:</strong> Code Reviews, Technical Mentoring, Service Ownership, Stakeholder Collaboration, Agile Execution</div>
               </div>
             </section>
 
@@ -102,18 +101,29 @@ const Resume = () => {
               {/* Current Role */}
               <div className="mb-6">
                 <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-lg font-semibold text-foreground">Software Engineer II | Simplify360 (A Nextiva Company)</h3>
+                  <span className="text-sm text-muted-foreground">Apr 2026 - Present</span>
+                </div>
+                <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
+                  <li>Own backend delivery for enterprise workflows in Unibox CRM, turning business requirements into scalable service implementations and production releases.</li>
+                  <li>Drive architecture decisions for microservices and event-driven integrations across WhatsApp, Facebook, and Live Chat channels.</li>
+                  <li>Serve as the de facto technical lead for a team of 10 engineers, mentoring implementation, guiding technical decisions, and unblocking delivery.</li>
+                  <li>Integrated AI/ML capabilities such as sentiment analysis and summarization to improve agent productivity and customer insight.</li>
+                  <li>Partner with PM, QA, Design, and client-facing teams to scope releases, manage tradeoffs, and deliver reliable features for enterprise customers.</li>
+                  <li>Improved release reliability through Dockerized services, CI/CD pipelines, and hands-on production support for large enterprise accounts.</li>
+                </ul>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex justify-between items-start mb-2">
                   <h3 className="text-lg font-semibold text-foreground">Software Engineer I | Simplify360 (A Nextiva Company)</h3>
-                  <span className="text-sm text-muted-foreground">Oct 2024 - Present</span>
+                  <span className="text-sm text-muted-foreground">Oct 2024 - Mar 2026</span>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
                   <li>Designed and developed scalable microservices in Java 8 and Spring Boot for customer support platforms like WhatsApp, Facebook, and Live Chat.</li>
                   <li>Built asynchronous event-driven systems using Kafka to streamline ticket creation, assignment, and response management.</li>
                   <li>Designed and implemented a locking system using multithreading to ensure sequential processing of user-specific message webhooks at scale.</li>
-                  <li>Integrated AI/ML capabilities such as sentiment analysis and summarization to enhance user insights and agent efficiency.</li>
-                  <li>Developed containerized applications using Docker, deployed through CI/CD pipelines to ensure fast and reliable delivery.</li>
-                  <li>Collaborated with cross-functional teams (PMs, QA, Design) to build and release features for Unibox CRM platform in agile sprints.</li>
-                  <li>Currently serving as the de facto technical lead for a team of 10 engineers, guiding development, architecture decisions, and mentoring, due to deep system-level understanding and lack of senior technical leadership in the organization.</li>
-                  <li>Provided production support and client-level customization for real-time bot systems used by clients like Tata Play, Kotak, and Bank of Baroda.</li>
+                  <li>Provided production support and client-level customization for real-time bot systems used by large enterprise clients.</li>
                 </ul>
               </div>
 
@@ -139,6 +149,7 @@ const Resume = () => {
               <h2 className="text-xl font-bold text-foreground mb-3">ACHIEVEMENTS</h2>
               <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
                 <li>Recognized by Tata Play with an official appreciation certificate for leading the design and implementation of WhatsApp Bots that significantly improved their CRM operations.</li>
+                <li>Progressed into a broader ownership role spanning architecture guidance, mentoring, and release execution across enterprise support workflows.</li>
                 <li>Contributed to client success stories by delivering enterprise-grade AI chatbots, leading to measurable improvements in agent productivity and cost savings.</li>
               </ul>
             </section>
