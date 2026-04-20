@@ -2,7 +2,7 @@
 # Usage: ./deploy.sh dev|prod
 
 EC2_USER=killer
-REMOTE_BASE=/var/www/sairam-bytes
+REMOTE_BASE=/mnt/apps/sairam-bytes
 
 # 1️⃣ Check env
 if [ -z "$1" ]; then
@@ -38,12 +38,12 @@ npm run build
 echo "Deploying to $ENV..."
 #rsync -avz --rsync-path="sudo rsync" dist/ $EC2_USER:$REMOTE_PATH
 
-DEST_DIR=/mnt/apps/sairam-bytes
-mkdir -p $DEST_DIR
+mkdir -p $REMOTE_PATH
 
-rsync -avz dist/ $DEST_DIR
+rsync -avz dist/ $REMOTE_PATH
 
 # 5️⃣ Done
 echo "✅ Deployment complete!"
 echo "🌍 $SITE"
+
 
