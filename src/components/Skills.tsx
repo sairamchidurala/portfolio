@@ -9,33 +9,33 @@ const skillCategories = [
     color: "text-blue-400"
   },
   {
-    title: "Architecture & Design",
+    title: "Architecture & Scalability",
     icon: Server,
-    skills: ["Microservices", "Multithreading", "Design Patterns", "Event-driven Systems"],
+    skills: ["Microservices", "Event-driven Systems", "System Design", "Design Patterns", "Multithreading", "Distributed Workflows"],
     color: "text-green-400"
   },
   {
-    title: "Databases",
+    title: "Data & Messaging",
     icon: Database,
-    skills: ["MySQL", "MongoDB (NoSQL)", "Query Optimization"],
+    skills: ["MySQL", "MongoDB (NoSQL)", "Apache Kafka", "Webhooks", "Query Optimization"],
     color: "text-purple-400"
   },
   {
-    title: "DevOps & Tools",
+    title: "DevOps & Delivery",
     icon: Settings,
-    skills: ["Git", "CI/CD (GitHub Actions, Jenkins)", "Docker", "Bash", "Linux"],
+    skills: ["Git", "CI/CD (GitHub Actions, Jenkins)", "Docker", "Linux", "Bash", "Release Ownership"],
     color: "text-orange-400"
   },
   {
-    title: "Messaging & Integration",
+    title: "Engineering Ownership",
     icon: MessageSquare,
-    skills: ["Apache Kafka", "Webhooks", "Third-party APIs"],
+    skills: ["End-to-end Feature Delivery", "Service Ownership", "Production Support", "Secure Integrations", "Requirement Refinement"],
     color: "text-cyan-400"
   },
   {
-    title: "Development Practices",
+    title: "Collaboration & Leadership",
     icon: GitBranch,
-    skills: ["Agile", "Data Structures & Algorithms", "System Design"],
+    skills: ["Technical Mentoring", "Code Reviews", "Cross-functional Collaboration", "Stakeholder Communication", "Agile Execution"],
     color: "text-pink-400"
   }
 ];
@@ -49,7 +49,7 @@ const Skills = () => {
             Technical Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive skill set focused on building scalable backend systems and leading development teams
+            Backend skill set centered on service ownership, scalable architecture, and technical leadership
           </p>
         </div>
         
