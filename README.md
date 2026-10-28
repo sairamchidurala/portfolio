@@ -1,12 +1,12 @@
 # Sai Ram Chidurala - Portfolio Website
 
-A modern, responsive portfolio website built with React and TypeScript, showcasing professional experience as a Backend Software Engineer with 3+ years of expertise in Java, Spring Boot, and microservices architecture.
+A modern, responsive portfolio website built with React and TypeScript, showcasing professional experience as a Backend Software Engineer with 4 years of expertise in Java, Spring Boot, and microservices architecture.
 
 ## 🌟 Overview
 
 This portfolio demonstrates:
 - **Backend Engineering Excellence**: Java, Spring Boot, Kafka, REST APIs
-- **Technical Leadership**: Leading a team of 10 engineers at Simplify360
+- **Technical Leadership**: Leading a team of 10 engineers at Nextiva
 - **Enterprise Impact**: Solutions delivered for Tata Play, Kotak, Bank of Baroda
 - **Modern Development**: Microservices, AI/ML integration, Docker, CI/CD
 

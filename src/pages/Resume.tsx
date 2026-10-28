@@ -71,7 +71,7 @@ const Resume = () => {
             <section className="mb-6">
               <h2 className="text-xl font-bold text-foreground mb-3">OBJECTIVE</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Software Engineer II with 3.5+ years of experience building scalable Java microservices and owning backend
+                Software Engineer II with 4 years of experience building scalable Java microservices and owning backend
                 delivery for enterprise customer support platforms. Proven strength in system design, event-driven architecture,
                 CI/CD, production support, and cross-functional execution. Experienced in mentoring engineers, shaping
                 technical direction, and delivering reliable client-facing features in agile environments.
@@ -101,7 +101,7 @@ const Resume = () => {
               {/* Current Role */}
               <div className="mb-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-semibold text-foreground">Software Engineer II | Simplify360 (A Nextiva Company)</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Software Engineer II | Nextiva</h3>
                   <span className="text-sm text-muted-foreground">Apr 2026 - Present</span>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">
@@ -116,7 +116,7 @@ const Resume = () => {
 
               <div className="mb-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-semibold text-foreground">Software Engineer I | Simplify360 (A Nextiva Company)</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Software Engineer I | Nextiva</h3>
                   <span className="text-sm text-muted-foreground">Oct 2024 - Mar 2026</span>
                 </div>
                 <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-4">

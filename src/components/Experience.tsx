@@ -5,7 +5,7 @@ import { Calendar, Users, TrendingUp, Award } from "lucide-react";
 const experiences = [
   {
     title: "Software Engineer II",
-    company: "Simplify360 (A Nextiva Company)",
+    company: "Nextiva",
     period: "Apr 2026 - Present",
     type: "Current Role",
     highlights: [
@@ -25,7 +25,7 @@ const experiences = [
   },
   {
     title: "Software Engineer I",
-    company: "Simplify360 (A Nextiva Company)",
+    company: "Nextiva",
     period: "Oct 2024 - Mar 2026",
     type: "1.5 Years",
     highlights: [
@@ -71,7 +71,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            3.5+ years of backend engineering with ownership across architecture, delivery, and enterprise-scale systems
+            4 years of backend engineering with ownership across architecture, delivery, and enterprise-scale systems
           </p>
         </div>
 

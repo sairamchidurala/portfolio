@@ -31,10 +31,10 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            Backend Engineer with 3.5+ years of experience building scalable Java microservices,
+            Backend Engineer with 4 years of experience building scalable Java microservices,
             owning end-to-end backend delivery, and mentoring engineers across enterprise
             customer support platforms. Currently driving architecture and release execution
-            at Simplify360 (Nextiva Company).
+            at Nextiva.
           </p>
 
           {/* Contact Info */}
