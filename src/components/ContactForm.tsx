@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import type { FieldErrors, Resolver } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -10,21 +9,41 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send, Loader2 } from "lucide-react";
 
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  subject: z.string().min(5, "Subject must be at least 5 characters"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
+type FormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
-type FormData = z.infer<typeof formSchema>;
+const formResolver: Resolver<FormData> = async (values) => {
+  const errors: FieldErrors<FormData> = {};
+
+  if (values.name.trim().length < 2) {
+    errors.name = { type: "minLength", message: "Name must be at least 2 characters" };
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+    errors.email = { type: "pattern", message: "Please enter a valid email address" };
+  }
+  if (values.subject.trim().length < 5) {
+    errors.subject = { type: "minLength", message: "Subject must be at least 5 characters" };
+  }
+  if (values.message.trim().length < 10) {
+    errors.message = { type: "minLength", message: "Message must be at least 10 characters" };
+  }
+
+  return {
+    values: Object.keys(errors).length === 0 ? values : {},
+    errors,
+  };
+};
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<FormData>({
-    resolver: zodResolver(formSchema),
+    resolver: formResolver,
     defaultValues: {
       name: "",
       email: "",
