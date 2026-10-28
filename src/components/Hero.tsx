@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import mobileHeroBackground from "@/assets/mobile-hero-bg.jpg";
+import { getCareerDuration } from "@/lib/experience";
 
 const Hero = () => {
   return (
@@ -31,7 +32,7 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed px-4">
-            Backend Engineer with 4 years of experience building scalable Java microservices,
+            Backend Engineer with {getCareerDuration()} years of experience building scalable Java microservices,
             owning end-to-end backend delivery, and mentoring engineers across enterprise
             customer support platforms. Currently driving architecture and release execution
             at Nextiva.

@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Download, ArrowLeft, MapPin, Phone, Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getCareerDuration } from "@/lib/experience";
 
 const Resume = () => {
   const handlePrint = () => {
@@ -71,7 +72,7 @@ const Resume = () => {
             <section className="mb-6">
               <h2 className="text-xl font-bold text-foreground mb-3">OBJECTIVE</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Software Engineer II with 4 years of experience building scalable Java microservices and owning backend
+                Software Engineer II with {getCareerDuration()} years of experience building scalable Java microservices and owning backend
                 delivery for enterprise customer support platforms. Proven strength in system design, event-driven architecture,
                 CI/CD, production support, and cross-functional execution. Experienced in mentoring engineers, shaping
                 technical direction, and delivering reliable client-facing features in agile environments.

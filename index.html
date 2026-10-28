@@ -7,6 +7,16 @@
   <title>Sai Ram Chidurala - Backend Software Engineer | Java | Microservices</title>
   <meta name="description"
     content="Experienced Backend Software Engineer with 4 years in Java, Spring Boot, and microservices. Currently leading a team of 10 engineers at Nextiva. Expert in Kafka, REST APIs, and enterprise solutions." />
+  <script>
+    const careerStart = new Date(2022, 9, 1);
+    const currentDate = new Date();
+    const elapsedMonths = Math.max(0, (currentDate.getFullYear() - careerStart.getFullYear()) * 12 + currentDate.getMonth() - careerStart.getMonth());
+    const years = Math.floor(elapsedMonths / 12);
+    const months = elapsedMonths % 12;
+    const tenure = months === 0 ? `${years}` : `${years}.${months}`;
+    document.querySelector('meta[name="description"]').content =
+      `Experienced Backend Software Engineer with ${tenure} years of experience in Java, Spring Boot, and microservices. Currently leading a team of 10 engineers at Nextiva. Expert in Kafka, REST APIs, and enterprise solutions.`;
+  </script>
   <meta name="author" content="Sai Ram Chidurala" />
   <meta name="keywords"
     content="Backend Engineer, Java Developer, Spring Boot, Microservices, Software Engineer, Team Lead, Kafka, REST API" />

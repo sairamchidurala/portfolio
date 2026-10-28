@@ -1,6 +1,6 @@
 # Sai Ram Chidurala - Portfolio Website
 
-A modern, responsive portfolio website built with React and TypeScript, showcasing professional experience as a Backend Software Engineer with 4 years of expertise in Java, Spring Boot, and microservices architecture.
+A modern, responsive portfolio website built with React and TypeScript, showcasing professional experience as a Backend Software Engineer since October 2022, with expertise in Java, Spring Boot, and microservices architecture.
 
 ## 🌟 Overview
 
