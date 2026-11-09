@@ -1,16 +1,17 @@
 #!/bin/bash
 # Usage: ./deploy.sh dev|prod
+set -euo pipefail
 
 EC2_USER=killer
 REMOTE_BASE=/mnt/apps/sairam-bytes
 
 # 1️⃣ Check env
-if [ -z "$1" ]; then
+if [ "$#" -ne 1 ]; then
   echo "❌ Please provide environment (dev|prod)"
   exit 1
 fi
 
-ENV=$1
+ENV="$1"
 if [ "$ENV" = "dev" ]; then
   REMOTE_PATH="${REMOTE_BASE}-dev"
   SITE="https://dev.iamsairam.in/"
@@ -30,7 +31,12 @@ fi
 
 # 3️⃣ Install deps & build
 echo "Installing dependencies..."
-npm ci
+if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+  npm ci
+else
+  echo "No npm lockfile found; using npm install instead of npm ci."
+  npm install
+fi
 echo "Building project..."
 npm run build
 
@@ -38,9 +44,9 @@ npm run build
 echo "Deploying to $ENV..."
 #rsync -avz --rsync-path="sudo rsync" dist/ $EC2_USER:$REMOTE_PATH
 
-mkdir -p $REMOTE_PATH
+mkdir -p "$REMOTE_PATH"
 
-rsync -avz dist/ $REMOTE_PATH
+rsync -avz dist/ "$REMOTE_PATH"
 
 # 5️⃣ Done
 echo "✅ Deployment complete!"

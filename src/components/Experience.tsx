@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users, TrendingUp, Award } from "lucide-react";
+import { getCareerDuration } from "@/lib/experience";
 
 const experiences = [
   {
@@ -71,7 +72,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            4 years of backend engineering with ownership across architecture, delivery, and enterprise-scale systems
+            {getCareerDuration()} years of backend engineering with ownership across architecture, delivery, and enterprise-scale systems
           </p>
         </div>
 
